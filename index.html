@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List - @milenaagostinho</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+    <header>
+        <h1 class="container text-center">☁️ Lista de Tarefas ☁️</h1>
+    </header>
+
+    <main class="container flex-grow-1">
+        <section class="formulario-vitrificado p-4 rounded-4 mb-4">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="novaTarefa"
+                        placeholder="Nova tarefa"
+                    />
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" aria-label="Selecione a prioridade">
+                        <option value="" selected disabled hidden>Selecione uma prioridade</option>
+                        <option value="1">Baixa</option>
+                        <option value="2">Média</option>
+                        <option value="3">Alta</option>
+                    </select>
+                </div>
+                <div class="col-md-4 d-grid">
+                    <button id="adicionar" class="btn btn-adicionar">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="tabela-container">
+                <table class="table table-bordered tabela-vitrificada">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tarefa</th>
+                            <th scope="col">Prioridade</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="confirmarModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmar Conclusão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    Tem certeza que deseja marcar esta tarefa como concluída?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="confirmarConclusao">Sim, quero concluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="./script.js"></script>
+    <audio id="audioEeeee" src="sounds/eeeeee.mp3" preload="auto"></audio>
+
+    <footer class="footer-candy text-center">
+        <span>To Do List | Feito com ♥ por <a href="https://github.com/milenaagostinho" target="_blank" style="text-decoration: underline; color: inherit;">Milena Agostinho</a></span>
+    </footer>
+</body>
+</html>
